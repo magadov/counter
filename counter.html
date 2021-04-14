@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intocode</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<script src="counter.js"></script>
+<div class=" main">
+    <div class="title">
+        <p id="value">VALUE <span id="counterValue">0</span></p>
+    </div>
+        <div class="buttonsCounter">
+
+
+            <button id="plus">
+                Увеличить значение
+            </button>
+
+            <button id="minus">
+                Уменьшить значение
+            </button>
+
+            <button id="sbros">
+                Сброс счётчика
+            </button>
+            <button id="remove">
+                Уничтожение страницы
+            </button>
+
+
+    </div>
+</div>
+
+
+<script>
+    let getCurrentValue = () => {
+    let counterValue = document.getElementById('counterValue');
+
+
+    let num = Number(counterValue.textContent);
+        if (value.textContent > 10){
+            value.bgcolor = 'blue';
+        }
+    return num;
+    }
+
+    let increment = () => {
+        let counterValue = document.getElementById('counterValue');
+        counterValue.textContent = getCurrentValue() + 1;
+    }
+
+    const plus = document.getElementById("plus");
+    plus.addEventListener("click", () => {
+        let counterValue = document.getElementById('counterValue');
+        counterValue.textContent = getCurrentValue() + 1;
+    });
+        const minus = document.getElementById("minus");
+        minus.addEventListener("click", () => {
+            let counterValue = document.getElementById('counterValue');
+            counterValue.textContent = getCurrentValue() - 1;
+        });
+    const sbros = document.getElementById("sbros");
+    sbros.addEventListener("click", () => {
+        let counterValue = document.getElementById('counterValue');
+        counterValue.textContent = 0;
+    });
+
+    const remove = document.getElementById("remove");
+    remove.addEventListener('click', () =>{
+        document.body.remove();
+    });
+
+
+
+
+</script>
+</body>
+</html>
